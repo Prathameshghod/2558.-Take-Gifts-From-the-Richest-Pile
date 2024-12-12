@@ -1,0 +1,8 @@
+class Solution:
+    def pickGifts(self, gifts: List[int], k: int) -> int:
+        for i in range(k):
+            gifts.sort()
+            a=math.sqrt(gifts[-1])
+            b=math.floor(a)
+            gifts[-1]=b
+        return sum(gifts)
